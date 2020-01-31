@@ -1,0 +1,136 @@
+<html>
+<script>
+    //function that display value 
+    function dis(val) {
+        document.getElementById("result").value += val
+    }
+
+    //function that evaluates the digit and return result 
+    function solve() {
+        let x = document.getElementById("result").value
+        let y = eval(x)
+        document.getElementById("result").value = y
+    }
+
+    //function that clear the display 
+    function clr() {
+        document.getElementById("result").value = ""
+    }
+
+    function fact(n) {
+        let f = 1;
+        for (i = 2; i <= n; i++)
+            f = f * i;
+        return f;
+
+
+    }
+
+    function exp(n) {
+
+        return Math.pow(Math.E, n)
+
+
+    }
+
+
+
+
+    function calcfac() {
+        let x = document.getElementById("result").value
+        let y = eval(x)
+        document.getElementById("result").value = fact(y);
+
+    }
+
+    function calcexp() {
+        let x = document.getElementById("result").value
+        let y = eval(x)
+        document.getElementById("result").value = exp(y);
+
+    }
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+<style>
+    input[type="text"] {
+        background-color: white;
+        border: solid black 2px;
+        width: 225px;
+    }
+    
+    .btn {
+        background-color: green;
+        color: black;
+        border: solid black 2px;
+        width: 100%
+    }
+    
+    .container {
+        padding: 80px 120px;
+    }
+</style>
+
+<body>
+
+    <div class="container">
+
+
+        <form>
+
+
+
+
+            <input type="text" id="result">
+            <table>
+
+                <tr>
+
+                    <td><button type="button" class="btn btn-info" onclick="dis('1')">1</button></td>
+                    <td><button type="button" class="btn btn-info" onclick="dis('2')">2</button></td>
+                    <td><button type="button" class="btn btn-info" onclick="dis('3')">3</button></td>
+                    <td><button type="button" class="btn btn-info" onclick="dis('4')">4</button></td>
+                    <td><button type="button" class="btn btn-info" onclick="dis('5')">5</button></td>
+                </tr>
+                <tr>
+
+                    <td><button type="button" class="btn btn-info" onclick="dis('6')">6</button></td>
+                    <td><button type="button" class="btn btn-info" onclick="dis('7')">7</button></td>
+                    <td><button type="button" class="btn btn-info" onclick="dis('8')">8</button></td>
+                    <td><button type="button" class="btn btn-info" onclick="dis('9')">9</button></td>
+                    <td><button type="button" class="btn btn-success" onclick="solve()">=</button></td>
+
+
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-info" onclick="dis('+')">+</button></td>
+                    <td><button type="button" class="btn btn-info" onclick="dis('-')">-</button></td>
+                    <td><button type="button" class="btn btn-info" onclick="dis('*')">*</button></td>
+                    <td><button type="button" class="btn btn-info" onclick="dis('/')">/</button></td>
+                    <td><button type="button" class="btn btn-success" onclick="clr()">Clear</button></td>
+
+
+
+                </tr>
+                <tr>
+                    <td><button type="button" class="btn btn-info" onclick="calcfac()">n!</button></td>
+                    <td><button type="button" class="btn btn-info" onclick="calcexp()">e^x</button></td>
+                    <td><button type="button" class="btn btn-info" onclick="dis('^')">exp</button></td>
+                    <td><button type="button" class="btn btn-info" onclick="dis('/')">/</button></td>
+                    <td><button type="button" class="btn btn-success" onclick="clr()">Clear</button></td>
+
+
+
+                </tr>
+            </table>
+
+        </form>
+        </form>
+    </div>
+
+</body>
+
+</html>
